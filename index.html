@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ar STUDIO</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="transition.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handwind&display=swap">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    
+    AOS.init({
+      duration: 800, // Animation duration
+      easing: 'ease-in-out', // Easing option
+      once: true // Animation only occurs once
+    });
+  </script>  
+  <script>
+    function scrollToProjects() {
+      const projectsSection = document.getElementById('projects');
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+      
+   // Hide the button after it's clicked
+   document.getElementById('scrollBtn').style.display = 'none';
+    }
+    let isBinary = true; // Variable to track state
+
+    function convertText() {
+      const content = document.getElementById('binaryText').innerText.trim(); // Get the content
+      let output = '';
+
+      if (isBinary) {
+        // Convert binary to text
+        const binaryArray = content.split(' ');
+        for (let i = 0; i < binaryArray.length; i++) {
+          const decimalValue = parseInt(binaryArray[i], 2);
+          const character = String.fromCharCode(decimalValue);
+          output += character;
+        }
+        isBinary = false;
+      } else {
+        // Convert text to binary
+        for (let i = 0; i < content.length; i++) {
+          const binaryChar = content.charCodeAt(i).toString(2);
+          output += binaryChar + ' ';
+        }
+        isBinary = true;
+      }
+      
+      document.getElementById('binaryText').innerText = output.trim(); // Replace the content
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li class="name">ARNIE SANTOS</li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1 id="binaryText">01000001 01110010 01101110 01101001 01100101 00100000 01010011 01100001 01101110 01110100 01101111 01110011</h1>
+      <button class="btn-trans" onclick="convertText()">Convert</button>
+      <p>Hello Mabuhay! <i class="fas fa-camera"></i><i class="fab fa-react"></i> I'm a Junior Web developer and a Professional Photographer based here at Pampanga Philippines. Currently studying at City College of Angeles with a course of Bachelor of Science in Computer Science and I'm Passionate about Photography, Videography, and Basic Web Development.</p>
+            i`m Currently working with,</p>
+      </p>
+      <ul role="list" depth="0" data-aos="fade" class="css-63qrrg aos-init aos-animate">
+        <li data-aos="flip-up" data-aos-delay="400" index="0" class="aos-init aos-animate">Javascript</li>
+        <li data-aos="flip-up" data-aos-delay="500" index="1" class="aos-init aos-animate">NodeJS</li>
+        <li data-aos="flip-up" data-aos-delay="600" index="2" class="aos-init aos-animate">Flutter</li>
+        <li data-aos="flip-up" data-aos-delay="700" index="3" class="aos-init aos-animate">Adobe Premier</li>
+        <li data-aos="flip-up" data-aos-delay="700" index="3" class="aos-init aos-animate">Adobe After Effects</li>
+      </ul>
+      <!-- Your content goes here -->
+      <button onclick="scrollToProjects()" class="scroll-down-btn">
+        <i class="fas fa-chevron-down"></i>
+      </button>
+    </section>
+
+    <section id="about">
+      <img src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t39.30808-6/396512043_3466684356917906_2839553950398375920_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeFpj1vhrApp8zPuGr0a0I6A2r-DFrNpX2nav4MWs2lfaUANOkVuUp6Sk4sDNh0FCxBtRiC4ryiLoeszl7jrSrDl&_nc_ohc=ngpXcYHC_g4AX8yxITg&_nc_ht=scontent.fcrk1-2.fna&oh=00_AfBI75xLfOeOrRWc49AnrJ_WJfLc9E4oJKGJAMo5XYJwFw&oe=65812DD8" alt="">
+    </section>
+
+    <section id="projects">
+        <header>PROJECTS</header>
+      <h2>Rosaryo</h2>
+      <div class="project">
+        <h3>Rosaryo - Liwanag sa Dilim</h3>
+        <p>Rosaryo Liwanag sa Dilim" is a short film created by Ar Studio, directed by Arnie Santos. This film was showcased at CCA during CCA: College Days.</p>
+        <div class="project-rosaryo">
+        <img src="https://scontent.fcrk1-5.fna.fbcdn.net/v/t39.30808-6/354248003_644692294347153_2903844613123877100_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeGl3DoPVNQ4w39lFr5WKoEUmSgbCLKp3vSZKBsIsqne9B44vqLTickyMFjBnGQeY3cXDC7GHnaBbRlm0QRDoLkY&_nc_ohc=lQS7LG7kucYAX_qyNXN&_nc_ht=scontent.fcrk1-5.fna&oh=00_AfDTBE1xk1KnYTUR1lzbheKatseq6-Ekt1J1IhBNI0gN9Q&oe=6580CD23" alt=""><br>
+        <img src="rosaryo.png" alt="">
+        </div>
+        <a href="">Watch Here</a>
+    </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Description of Project 2</p>
+      </div>
+      <!-- Add more project divs as needed -->
+    </section>
+
+    <section id="resume">
+      <h2>Contact Me</h2>
+      <p>Include a contact form or details here.</p>
+    </section>
+  </main>
+
+  <footer style="text-align:center">
+    <p>&copy; 2023 ARNIE SANTOS</p>
+  </footer>
+
+</body>
+</html>
