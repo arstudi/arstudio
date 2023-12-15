@@ -19,3 +19,23 @@
     font-size: 24px;
     color: #333;
   }
+  /* Style for the watch link */
+.watch-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the watch link */
+  .watch-link:hover {
+    background-color:antiquewhite;
+    color: brown;
+  }
+.headphoto{
+    text-align: left;
+}
+

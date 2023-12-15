@@ -4,6 +4,12 @@
     --accent-color: #ff7f50; /* Change this to your desired accent color */
   }
   
+
+  #home{
+    margin-right: 30%;
+  }
+
+ 
   /* Apply basic styles to make it mobile-friendly */
   body {
     font-family: Arial, sans-serif;
@@ -118,7 +124,7 @@
     }
   
     main {
-      display: grid;
+      display: inline-block;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
       padding: 40px;
@@ -184,10 +190,9 @@
     display:flex;
     margin: auto;
     padding: 5px;
-    justify-content: space-around;
-
-
-    
+    }
+    .project-rosaryo img {
+      margin: 5px; /* Adjust the margin value as needed */
     }
     html {
       scroll-behavior: smooth;
